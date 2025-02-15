@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { Star } from 'lucide-react';
 import apiClient from '../../actions/axiosInterceptor';
 
-export function AddReviewForm({ roomId, onReviewAdded }) {
+export default function AddReviewForm({ roomId, onReviewAdded }) {
     const [rating, setRating] = useState(0);
     const [comment, setComment] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);

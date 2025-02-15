@@ -2,7 +2,7 @@ import { RoomCard } from './room-card'
 import Skeleton from "react-loading-skeleton"; // Import Skeleton
 import Link from 'next/link';
 
-export function RoomList({ rooms, currentPage, totalPages, pageSize, onPageChange, onPageSizeChange, isLoading }) {
+export default function RoomList({ rooms, currentPage, totalPages, pageSize, onPageChange, onPageSizeChange, isLoading }) {
     if (isLoading) {
         return (
             <div>

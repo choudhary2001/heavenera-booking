@@ -6,7 +6,7 @@ import { Search, X, Star } from 'lucide-react'
 import * as FaIcons from "react-icons/fa"; // Import all Font Awesome icons
 import * as TbIcons from "react-icons/tb"; // Import all Tailwind Icons
 
-export function FilterSidebar({ onFilterChange, isOpen, onClose, facilitiesList, categoriesList, actualMinPrice, actualMaxPrice }) {
+export default function FilterSidebar({ onFilterChange, isOpen, onClose, facilitiesList, categoriesList, actualMinPrice, actualMaxPrice }) {
     const [type, setType] = useState('') // Room type filter
     const [priceRange, setPriceRange] = useState([0, 999999]) // Price range filter
     const [selectedRatings, setSelectedRatings] = useState([]) // Multiple ratings filter

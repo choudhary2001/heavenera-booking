@@ -13,7 +13,7 @@ function formatDateTime(dateTimeString) {
     });
 }
 
-export function Reviews({ reviews }) {
+export default function Reviews({ reviews }) {
     const sortedReviews = [...reviews].sort(
         (a, b) => new Date(b.created_at) - new Date(a.created_at)
     );

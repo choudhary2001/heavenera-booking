@@ -7,10 +7,10 @@ switch (environment) {
         baseURL = process.env.REACT_APP_PROD_API_BASE_URL;
         break;
     case 'development':
-        baseURL = 'http://heavenera.swastik.ai:8001';
+        baseURL = 'https://heavenera.swastik.ai';
         break;
     default:
-        baseURL = 'http://heavenera.swastik.ai:8001';
+        baseURL = 'https://heavenera.swastik.ai';
         break;
 }
 
