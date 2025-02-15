@@ -107,7 +107,7 @@ export default function RoomDetails() {
     useEffect(() => {
         fetchRoomData();
         fetchRoomAvailabilityData();
-    }, [id, fetchRoomData, fetchRoomAvailabilityData]);
+    }, [id]);
 
     // Directions calculation - only run when room, lat, and lng are available
     useEffect(() => {
