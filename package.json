@@ -5,6 +5,7 @@
   "description": "Heavenera - A free Tailwind CSS, NextJS and React UI Kit and Admin by Shwastik Tech Solutions Pvt. Ltd..",
   "repository": "https://github.com/creativetimofficial/notus-nextjs",
   "license": "MIT",
+  "sideEffects": false,
   "dependencies": {
     "@fortawesome/fontawesome-free": "6.0.0",
     "@popperjs/core": "2.11.7",

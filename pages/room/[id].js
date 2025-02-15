@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
-import { MapPin, Star } from "lucide-react";
+import dynamic from 'next/dynamic';
+
+// Use named imports via dynamic import
+const MapPin = dynamic(() =>
+    import("lucide-react").then((mod) => mod.MapPin)
+);
+const Star = dynamic(() =>
+    import("lucide-react").then((mod) => mod.Star)
+);
 import { useRouter } from "next/router";
 import apiClient from "../../actions/axiosInterceptor";
 import ImageSlider from "../../components/Rooms/image-slider";
@@ -14,7 +22,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { CheckCircle, XCircle } from "lucide-react";
 import Swal from 'sweetalert2';
-import { FiUser, FiPhone } from "react-icons/fi"; // Import icons from react-icons
+import { FiUser, FiPhone } from "react-icons/fi";
 
 export default function RoomDetails() {
     const user = useSelector((state) => state.auth.user);
