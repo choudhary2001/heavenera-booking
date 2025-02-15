@@ -2,14 +2,11 @@ import React, { useState, useEffect } from "react";
 import apiClient from '../../actions/axiosInterceptor';
 import CardTable from "components/Cards/CardTable.js";
 import Admin from "layouts/Admin.js";
-import ReusableModal from "components/Modal/ReusableModal";
-import { useDispatch, useSelector } from 'react-redux';
-import Swal from "sweetalert2";
+import { useDispatch } from 'react-redux';
 import { format } from "date-fns";
 import clsx from 'clsx';
 
 export default function Bookings() {
-    const dispatch = useDispatch();
     const [isLoading, setIsLoading] = useState(true);
     const [bookings, setBookings] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import apiClient from '../../actions/axiosInterceptor';
 import CardTable from "components/Cards/CardTable.js";
 import Admin from "layouts/Admin.js";
-import ReusableModal from "components/Modal/ReusableModal";
 import Swal from "sweetalert2";
 import clsx from 'clsx';
 import { format } from "date-fns";
@@ -10,8 +9,6 @@ import { format } from "date-fns";
 export default function Wallet() {
     const [wallet, setWallet] = useState({ balance: 0, total_earning: 0 });
     const [transactions, setTransactions] = useState([]);
-    const [withdrawalAmount, setWithdrawalAmount] = useState("");
-    const [isModalOpen, setIsModalOpen] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const [pageSize, setPageSize] = useState(10);
     const [totalPages, setTotalPages] = useState(1);

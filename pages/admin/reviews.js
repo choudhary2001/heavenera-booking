@@ -4,7 +4,6 @@ import CardTable from "components/Cards/CardTable.js";
 import Admin from "layouts/Admin.js";
 import Swal from "sweetalert2";
 import { format } from "date-fns";
-import clsx from 'clsx';
 import Link from 'next/link';
 
 export default function Reviews() {

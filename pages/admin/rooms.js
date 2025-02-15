@@ -4,8 +4,6 @@ import CardTable from "components/Cards/CardTable.js";
 import Admin from "layouts/Admin.js";
 import ReusableModal from "components/Modal/ReusableModal";
 import MultiSelectDropdownWithSearch from "components/Dropdowns/MultiSelectDropdownWithSearch";
-import dynamic from "next/dynamic";
-import Map from "components/Map/Map.js";
 import { LoadScriptNext, GoogleMap, Marker } from "@react-google-maps/api";
 import usePlacesAutocomplete, { getGeocode, getLatLng } from "use-places-autocomplete";
 import { FaLocationArrow, FaSearch } from 'react-icons/fa'; // Import an icon for current location
