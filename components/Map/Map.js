@@ -15,23 +15,23 @@ export default function Map() {
     const [activeSuggestion, setActiveSuggestion] = useState(0); // Tracks keyboard selection
     const [searchType, setSearchType] = useState("Students");
 
-    useEffect(() => {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    setCurrentLocation({
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude,
-                    });
-                    dispatch({
-                        type: SET_LOCATION,
-                        payload: { lat: position.coords.latitude, lng: position.coords.longitude },
-                    });
-                },
-                (error) => console.error("Error getting location:", error)
-            );
-        }
-    }, []); // Empty dependency array ensures this runs once on mount
+    // useEffect(() => {
+    //     if (navigator.geolocation) {
+    //         navigator.geolocation.getCurrentPosition(
+    //             (position) => {
+    //                 setCurrentLocation({
+    //                     lat: position.coords.latitude,
+    //                     lng: position.coords.longitude,
+    //                 });
+    //                 dispatch({
+    //                     type: SET_LOCATION,
+    //                     payload: { lat: position.coords.latitude, lng: position.coords.longitude },
+    //                 });
+    //             },
+    //             (error) => console.error("Error getting location:", error)
+    //         );
+    //     }
+    // }, []); // Empty dependency array ensures this runs once on mount
 
     const {
         ready,

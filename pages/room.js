@@ -36,13 +36,13 @@ export default function Rooms() {
         setIsClient(true); // Set client flag
     }, []);
 
-    useEffect(() => {
-        if (lat && lng) {
-            setSelectedLocation({ lat, lng });
-            const results = getGeocode({ location: { lat: lat, lng: lng } });
-            setValue(results[0]?.formatted_address || "");
-        }
-    }, [lat, lng]);
+    // useEffect(() => {
+    //     if (lat && lng) {
+    //         setSelectedLocation({ lat, lng });
+    //         const results = getGeocode({ location: { lat: lat, lng: lng } });
+    //         setValue(results[0]?.formatted_address || "");
+    //     }
+    // }, [lat, lng]);
 
 
     const [filters, setFilters] = useState({
@@ -250,7 +250,7 @@ export default function Rooms() {
             <Navbar />
             <div className="bg-gray-100 pt-6 pb-12">
                 <button
-                    className="lg:hidden bg-blue-500 text-white p-2 rounded-md fixed top-[70px] right-0 z-9999"
+                    className="lg:hidden bg-blue-500 text-white p-2 rounded-md fixed top-[90px] right-0 z-9999"
                     onClick={() => setIsFilterOpen(!isFilterOpen)}
                     aria-label="Toggle filters"
                 >
