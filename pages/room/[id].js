@@ -41,7 +41,7 @@ export default function RoomDetails() {
     const today = new Date();
 
     const fetchRoomData = async () => {
-        if (!id) return;
+        // if (!id) return;
 
         setIsLoading(true);
         setError(null);
