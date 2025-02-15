@@ -1,15 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
-import dynamic from 'next/dynamic';
-
-// Use named imports via dynamic import
-const MapPin = dynamic(() =>
-    import("lucide-react").then((mod) => mod.MapPin)
-);
-const Star = dynamic(() =>
-    import("lucide-react").then((mod) => mod.Star)
-);
+import { MapPin, Star } from "lucide-react";
 import { useRouter } from "next/router";
 import apiClient from "../../actions/axiosInterceptor";
 import ImageSlider from "../../components/Rooms/image-slider";
@@ -36,12 +28,11 @@ export default function RoomDetails() {
     const router = useRouter();
     const { id } = router.query;
     const isAuthenticated = useSelector((state) => !!state.auth.accessToken);
-    const [availableRooms, setAvailableRooms] = useState(0);
     const [selectedRange, setSelectedRange] = useState([null, null]);
     const today = new Date();
 
     const fetchRoomData = async () => {
-        // if (!id) return;
+        if (!id) return;
 
         setIsLoading(true);
         setError(null);
@@ -116,8 +107,7 @@ export default function RoomDetails() {
     useEffect(() => {
         fetchRoomData();
         fetchRoomAvailabilityData();
-    }, [id]);
-
+    }, [id, fetchRoomData, fetchRoomAvailabilityData]);
 
     // Directions calculation - only run when room, lat, and lng are available
     useEffect(() => {
@@ -306,7 +296,7 @@ export default function RoomDetails() {
                         <span>{room?.owner?.first_name} {room?.owner?.last_name}</span>
                     </div>
 
-                    <a href={`tel:7357220325`} className={`flex items-center mt-2 rounded-full text-sm`}>
+                    <a href="tel:+917357220325" className={`flex items-center mt-2 rounded-full text-sm`}>
                         <FiPhone className="text-md" /> &nbsp;
                         7357220325
                     </a>
