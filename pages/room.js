@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
-import { FilterSidebar } from 'components/Rooms/filter-sidebar';
-import { RoomList } from 'components/Rooms/room-list';
+import FilterSidebar from 'components/Rooms/filter-sidebar';
+import RoomList from 'components/Rooms/room-list';
 import { Filter } from 'lucide-react';
 import { LoadScriptNext, GoogleMap, Marker } from "@react-google-maps/api";
 import usePlacesAutocomplete, { getGeocode, getLatLng } from "use-places-autocomplete";

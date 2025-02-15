@@ -18,7 +18,6 @@ import { FiUser, FiPhone } from "react-icons/fi"; // Import icons from react-ico
 
 export default function RoomDetails() {
     const user = useSelector((state) => state.auth.user);
-
     const [isLoading, setIsLoading] = useState(true);
     const [room, setRoom] = useState(null);
     const [bookedDates, setBookedDates] = useState([]);
